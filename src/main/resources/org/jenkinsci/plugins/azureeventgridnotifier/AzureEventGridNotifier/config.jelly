@@ -1,0 +1,43 @@
+<!--
+  ~ Copyright (c) Microsoft Corporation. All rights reserved.
+  ~ Licensed under the MIT License. See License.txt in the project root for
+  ~ license information.
+  -->
+  <?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+<f:entry
+            title="Azure Event Grid Endpoint"
+            field="topicEndpoint">
+            <f:textbox name="topicEndpoint" />
+        </f:entry>
+
+        <f:entry
+            title="Azure Event Grid Secret Key"
+            field="topicKey">
+
+            <f:password name="topicKey" />
+        </f:entry>
+         <f:entry   description="Custom subject (Can be empty)"
+                    title="Custom subject"
+                    field="subjectTemplate">
+                    <f:textbox name="subjectTemplate" />
+        </f:entry>
+        <f:entry description="Custom message (Can be empty)"
+            title="Custom message"
+            field="messageTemplate">
+            <f:textbox name="messageTemplate" />
+        </f:entry>
+
+        <f:entry
+            title="Send notification also on start of build?"
+            field="sendNotificationOnStart">
+            <f:booleanRadio name="sendNotificationOnStart" />
+        </f:entry>
+
+        <f:entry
+            title="Send notifications on every build?"
+            field="notifyOnEveryBuild">
+            <f:booleanRadio name="notifyOnEveryBuild" />
+        </f:entry>
+</j:jelly>
