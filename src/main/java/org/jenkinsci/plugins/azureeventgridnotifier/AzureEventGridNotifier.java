@@ -90,7 +90,7 @@ public class AzureEventGridNotifier extends Notifier {
         return (DescriptorImpl) super.getDescriptor();
     }
 
-    public void onStarted(AbstractBuild<?, ?> build, TaskListener listener) {
+    public void onStarted(AbstractBuild build, TaskListener listener) {
         if (isSendNotificationOnStart()) {
             LOG.info("Prepare Event Grid notification for build started...");
             send(build, listener, BuildPhase.STARTED);
@@ -111,7 +111,7 @@ public class AzureEventGridNotifier extends Notifier {
     }
 
     @Override
-    public boolean prebuild(AbstractBuild<?, ?> build, BuildListener listener) {
+    public boolean prebuild(AbstractBuild build, BuildListener listener) {
         onStarted(build, listener);
         return true;
     }
