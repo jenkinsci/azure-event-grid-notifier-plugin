@@ -28,6 +28,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.jenkinsci.plugins.azureeventgridnotifier.helpers.*;
+
 public class AzureEventGridNotifier extends Notifier {
 
     private static final Logger LOG = Logger.getLogger(AzureEventGridNotifier.class.getName());

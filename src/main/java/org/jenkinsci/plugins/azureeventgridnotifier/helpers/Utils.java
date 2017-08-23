@@ -3,7 +3,7 @@
  * Licensed under the MIT License. See License.txt in the project root for
  * license information.
  */
-package org.jenkinsci.plugins.azureeventgridnotifier;
+package org.jenkinsci.plugins.azureeventgridnotifier.helpers;
 
 import hudson.EnvVars;
 import hudson.model.AbstractBuild;
