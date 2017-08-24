@@ -129,9 +129,16 @@ public class Utils {
         Pattern pattern = Pattern.compile(REGEX);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
-            tokens.add(matcher.group(0).replaceAll("\\$", "").replaceAll("\\{", "").replaceAll("}", ""));
+            tokens.add(normalizeText(matcher.group(0)));
         }
         return tokens;
+    }
+
+    private static String normalizeText(String text) {
+        text = text.replaceAll("\\$", "");
+        text = text.replaceAll("\\{", "");
+        text = text.replaceAll("}", "");
+        return text;
     }
 
     private static String tokenizeText(String text, HashMap<String, String> replacements) {
