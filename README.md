@@ -25,4 +25,11 @@ To use this plugin, first you need to create an [Azure Event Grid Topic](https:/
 
 ### How to use
 
-You can define a custom subject and a custom message using environment variables such as ${BUILD_PHASE_NAME} ${BUILD_PHASE} ${BUILD_DURATION} ${BUILD_ARTIFACTS} or just leave the default message and subject.
+You can define a custom subject and a custom message using environment variables such as:
+```
+${BUILD_PHASE_NAME}
+${BUILD_PHASE}
+${BUILD_DURATION}
+${BUILD_ARTIFACTS}
+```
+or just leave the default message and subject.
