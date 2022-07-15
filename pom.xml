@@ -16,7 +16,7 @@
 
     <properties>
         <jenkins.version>1.625.3</jenkins.version>
-        <jackson>2.9.0</jackson>
+        <jackson>2.12.6.1</jackson>
     </properties>
     <name>Azure Event Grid Build Notifier Plugin</name>
     <description>A Jenkins plugin to send build notifications to an Azure Event Grid topic as post-build step.
